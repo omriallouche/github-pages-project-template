@@ -15,7 +15,7 @@ It uses github preset to automatically match your repository with links etc., an
      - Twitter follow button
 
 ### Demo
-Our end result can be seen [here](https://omriallouche.github.io/github-pages-personal-template).
+Our end result can be seen [here](https://omriallouche.github.io/github-pages-project-template).
 
 
 ## Introduction:
