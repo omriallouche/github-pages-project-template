@@ -37,7 +37,24 @@ Simply follow [this guide](https://guides.github.com/features/pages/) from GitHu
 ##### Create a _config.yml file
  In your repo's root directory, add a `_config.yml` file.
 
- The file includes the repo name, the name of the template it should use (in case we don't explicitly provide it, as we do below), and additional Jekyll gems. In our case, we'll add the SEO tags gem, to improve our project's visibility to search engines.
+ The file includes the repo name, the name of the template it should use (in case we don't explicitly provide it, as we do below), additional Jekyll gems, and any additional data we want to have available in the pages.
+ In the example code provided, we use the following data:
+ ```
+owner_display_name: Omri Allouche
+owner_bio: Entrepreneur, Data Scientist and Software engineer, with a PhD in Computational Ecology and 15 years experience leading R&amp;D teams and managing startups.
+owner_facebook_username: omri.allouche
+owner_linkedin_url: https://www.linkedin.com/in/omria
+twitter:
+  username: GilgameshSleeps
+facebook:
+  admins: omri.allouche
+google_analytics: UA-89870336-1
+ ```
+
+ The parameters we provide are available in the Jekyll template and pages under the `site` variable. For example, in our example {{site.owner_display_name}} will be compiled to `Omri Allouche`.
+
+ Note that we added the [SEO tags gem](https://github.com/jekyll/jekyll-seo-tag), to improve our project's visibility to search engines. The gem [documentation]((https://github.com/jekyll/jekyll-seo-tag)) describes additional tags you can set in your `_config.yml` file, in case you need more control.
+
 
 ##### Create a `_layouts` folder with the template html
  Inside the file `_layouts/default.html`, we'll put the html of our page template, that will be shared among different pages.

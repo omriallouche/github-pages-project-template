@@ -199,7 +199,7 @@
           </li>
 
           <li class="vcard-detail pt-1 css-truncate css-truncate-target">
-            <a href="https://twitter.com/{{site.owner_twitter_username}}" title="Twitter" target="_blank">
+            <a href="https://twitter.com/{{site.twitter.username}}" title="Twitter" target="_blank">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
@@ -213,7 +213,7 @@
 
         <div class="social-follow">
           <span class='st_fbsub_large' displayText='Facebook Subscribe' st_username='{{site.owner_facebook_username}}'></span>
-          <span class='st_twitterfollow_large' displayText='Twitter Follow' st_username='{{site.owner_twitter_username}}'></span>
+          <span class='st_twitterfollow_large' displayText='Twitter Follow' st_username='{{site.twitter.username}}'></span>
         </div>
 
       </div>
@@ -221,14 +221,14 @@
   </div>
 </div>
 
-{% if true or site.google_analytics %}
+{% if site.google_analytics %}
   <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
   </script>
   <script type="text/javascript">
     try {
-      var pageTracker = _gat._getTracker("{{ site.google_analytics  | default: 'UA-89870336-1' }}");
+      var pageTracker = _gat._getTracker("{{ site.google_analytics }}");
       pageTracker._trackPageview();
     } catch(err) {}
   </script>
