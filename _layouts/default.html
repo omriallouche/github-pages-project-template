@@ -168,13 +168,13 @@
           <img alt="{{ site.github.owner_name }}"
                class="avatar width-full rounded-2"
                height="230"
-               src="{{site.owner_gravatar_url}}" width="230">
+               src="{{site.github.owner_gravatar_url}}" width="230">
         </a>
 
         <div class="vcard-names-container py-3 js-sticky js-user-profile-sticky-fields " style="position: static;">
           <h3 class="vcard-names">
             <a href="{{ site.github.owner_url }}" aria-label="Omri's Github Account">
-              {% if owner_display_name %}
+              {% if site.owner_display_name %}
                 <span class="vcard-fullname d-block" itemprop="name">{{site.owner_display_name}}</span>
                 <span class="vcard-username d-block" itemprop="additionalName"><small>({{ site.github.owner_name }})</small></span>
 
